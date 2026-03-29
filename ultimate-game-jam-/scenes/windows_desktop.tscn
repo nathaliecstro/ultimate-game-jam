@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://b72euqywtjtti"]
+
+[ext_resource type="FontFile" uid="uid://daa8yqxuaqcci" path="res://assets/fonts/Battlenet.ttf" id="1_nukex"]
+[ext_resource type="Texture2D" uid="uid://bxowj4lsd0pev" path="res://assets/art/ultimate game jam art assets/Flag.png" id="2_dx8os"]
+[ext_resource type="Texture2D" uid="uid://dystitbdqgbs2" path="res://assets/art/ultimate game jam art assets/PatchRegular.png" id="3_npvqa"]
+[ext_resource type="Texture2D" uid="uid://dvquh10oe0hg4" path="res://assets/art/ultimate game jam art assets/PatchInverted.png" id="4_mp5gx"]
+[ext_resource type="Shader" uid="uid://cib7ex6rpqgei" path="res://scripts/windows_desktop.gdshader" id="5_dx8os"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_npvqa"]
+shader = ExtResource("5_dx8os")
+shader_parameter/SCREEN_HEIGHT = 480.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lnpd"]
+bg_color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2is0i"]
+texture = ExtResource("3_npvqa")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7b1ng"]
+texture = ExtResource("4_mp5gx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gd3bo"]
+texture = ExtResource("4_mp5gx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nukex"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+expand_margin_top = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nukex"]
+texture = ExtResource("4_mp5gx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[node name="WindowsDesktop" type="Control" unique_id=220706393]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=494402679]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 600.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.5019608, 0.5019608, 1)
+
+[node name="ScanLines" type="ColorRect" parent="." unique_id=1348150812]
+material = SubResource("ShaderMaterial_npvqa")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 600.0
+offset_bottom = 439.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=887865102]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 397.0
+offset_right = 600.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8lnpd")
+
+[node name="Button" type="Button" parent="Panel" unique_id=1867753576]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 85.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_nukex")
+theme_override_font_sizes/font_size = 28
+theme_override_icons/icon = ExtResource("2_dx8os")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2is0i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7b1ng")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gd3bo")
+text = "Start"
+
+[node name="Panel" type="Panel" parent="Panel" unique_id=853714455]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nukex")
+
+[node name="timePanel" type="Panel" parent="Panel" unique_id=225029313]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 8.0
+offset_right = 634.0
+offset_bottom = 39.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nukex")
+
+[node name="Label" type="Label" parent="Panel/timePanel" unique_id=1311651873]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_nukex")
+theme_override_font_sizes/font_size = 25
+text = "12:30 PM"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Ultimate Game Jam"
+run/main_scene="uid://b72euqywtjtti"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=480
 
 [physics]
 
