@@ -117,7 +117,7 @@ var dialogue_tree = {
 	"credits": {
 		"dahlia_says": "Thank you for our time together.",
 		"is_game_end": true, 
-		"opt1": "Restart",
-		"opt2": "Exit"
+		"opt1": "give up",
+		"opt2": "leave her alone"
 	}
 }

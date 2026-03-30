@@ -32,7 +32,7 @@ func _on_option_1_pressed():
 	var data = Dialogue.dialogue_tree[current_node]
 	
 	if data.has("is_game_end"):
-		get_tree().reload_current_scene()
+		get_tree().quit()
 	else:
 		SoundManager.send_play()
 		_process_player_input("opt1")
@@ -81,8 +81,8 @@ func _update_button_labels():
 	if data.has("is_game_end"):
 		choice_container.visible = false
 		await get_tree().create_timer(3.0).timeout
-		option1.text = "Restart"
-		option2.text = "Exit"
+		option1.text = "give up"
+		option2.text = "leave her alone"
 		choice_container.visible = true
 		choice_container.queue_sort()
 	else:

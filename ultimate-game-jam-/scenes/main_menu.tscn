@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://c32msyfl2vxnn"]
+
+[ext_resource type="Script" uid="uid://cufq4mqsjxrxf" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Shader" uid="uid://cib7ex6rpqgei" path="res://scripts/windows_desktop.gdshader" id="2_wu84c"]
+[ext_resource type="FontFile" uid="uid://daa8yqxuaqcci" path="res://assets/fonts/Battlenet.ttf" id="3_8ln24"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rtw2f"]
+shader = ExtResource("2_wu84c")
+shader_parameter/SCREEN_HEIGHT = 480.0
+
+[node name="MainMenu" type="MarginContainer" unique_id=2095503703]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1561212155]
+layout_mode = 2
+color = Color(0, 0.5019608, 0.5019608, 1)
+
+[node name="ScanLines" type="ColorRect" parent="." unique_id=729685644]
+material = SubResource("ShaderMaterial_rtw2f")
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=5290749]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=693199440]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer" unique_id=105428213]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer" unique_id=1333505630]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 64
+text = "My Desktop Garden"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer" unique_id=2579554]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2" unique_id=1313588742]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer" unique_id=2064924507]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer" unique_id=1944064000]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer" unique_id=1387319321]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 32
+text = ">"
+
+[node name="optionsName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer" unique_id=1349224945]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer" unique_id=4880737]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2" unique_id=1630565381]
+layout_mode = 2
+
+[node name="selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer" unique_id=1430340737]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 32
+text = "> "
+
+[node name="optionsName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer" unique_id=414895640]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 32
+text = "Quit"
