@@ -5,6 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://dystitbdqgbs2" path="res://assets/art/ultimate game jam art assets/PatchRegular.png" id="3_npvqa"]
 [ext_resource type="Texture2D" uid="uid://dvquh10oe0hg4" path="res://assets/art/ultimate game jam art assets/PatchInverted.png" id="4_mp5gx"]
 [ext_resource type="Shader" uid="uid://cib7ex6rpqgei" path="res://scripts/windows_desktop.gdshader" id="5_dx8os"]
+[ext_resource type="Texture2D" uid="uid://cgyqjcjchisxv" path="res://assets/logos/W95 Icons/my_computer_ICON.png" id="6_npvqa"]
+[ext_resource type="Texture2D" uid="uid://c4c4pfumtvojm" path="res://assets/logos/W95 Icons/network_neighbor_ICON.png" id="7_7b1ng"]
+[ext_resource type="Texture2D" uid="uid://b6hper4hgui02" path="res://assets/logos/W95 Icons/paint_ICON.png" id="8_gd3bo"]
+[ext_resource type="Texture2D" uid="uid://d3fbe4lstr0mb" path="res://assets/logos/W95 Icons/recycling_bin_ICON.png" id="9_v2c85"]
+[ext_resource type="Texture2D" uid="uid://bcncp5ou0o2sa" path="res://assets/logos/aol-international-logo-png-transparent.png" id="10_qi5rq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_npvqa"]
 shader = ExtResource("5_dx8os")
@@ -45,6 +50,21 @@ texture_margin_left = 2.0
 texture_margin_top = 2.0
 texture_margin_right = 2.0
 texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mp5gx"]
+texture = ExtResource("6_npvqa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_37eug"]
+texture = ExtResource("7_7b1ng")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1cg7k"]
+texture = ExtResource("8_gd3bo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bewsb"]
+texture = ExtResource("9_v2c85")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5asht"]
+texture = ExtResource("10_qi5rq")
 
 [node name="WindowsDesktop" type="Control" unique_id=220706393]
 layout_mode = 3
@@ -132,3 +152,101 @@ theme_override_font_sizes/font_size = 25
 text = "12:30 PM"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Icons" type="Control" parent="." unique_id=1995445761]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mycompuIcon" type="Panel" parent="Icons" unique_id=2124996711]
+layout_mode = 0
+offset_right = 68.0
+offset_bottom = 63.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mp5gx")
+
+[node name="Label" type="Label" parent="Icons/mycompuIcon" unique_id=1176281242]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 52.0
+offset_right = 67.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("1_nukex")
+theme_override_font_sizes/font_size = 12
+text = "My Computer"
+
+[node name="compuNeighborIcon" type="Panel" parent="Icons" unique_id=269698128]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 74.0
+offset_right = 58.0
+offset_bottom = 117.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_37eug")
+
+[node name="Label" type="Label" parent="Icons/compuNeighborIcon" unique_id=678311239]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 44.0
+offset_right = 46.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("1_nukex")
+theme_override_font_sizes/font_size = 12
+text = "Network 
+Neighorhood"
+horizontal_alignment = 1
+
+[node name="paintIcon" type="Panel" parent="Icons" unique_id=430210491]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 143.0
+offset_right = 65.0
+offset_bottom = 206.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1cg7k")
+
+[node name="Label" type="Label" parent="Icons/paintIcon" unique_id=1203563620]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 57.0
+offset_right = 45.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("1_nukex")
+theme_override_font_sizes/font_size = 12
+text = "Paint"
+
+[node name="RecycleBinIcon" type="Panel" parent="Icons" unique_id=511836510]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 211.0
+offset_right = 64.0
+offset_bottom = 266.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bewsb")
+
+[node name="Label" type="Label" parent="Icons/RecycleBinIcon" unique_id=1244423950]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 46.0
+offset_right = 56.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("1_nukex")
+theme_override_font_sizes/font_size = 12
+text = "Recycle Bin"
+
+[node name="AOL" type="Panel" parent="Icons" unique_id=1892164538]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 281.0
+offset_right = 55.0
+offset_bottom = 321.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5asht")
+
+[node name="Label" type="Label" parent="Icons/AOL" unique_id=279951667]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 43.0
+offset_right = 32.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("1_nukex")
+theme_override_font_sizes/font_size = 12
+text = "AOL"
