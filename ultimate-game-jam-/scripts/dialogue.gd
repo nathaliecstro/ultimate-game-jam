@@ -79,7 +79,7 @@ var dialogue_tree = {
 		"opt2": "...",
 		"is_end_of_day": true,
 		"next_day": 3,
-		"quote": "Even the sturdiest trees must bend in the wind.",
+		"quote": "Even the strongest trees must bend in the wind.",
 		"next_node": "day3_start"
 	},
 
@@ -107,9 +107,17 @@ var dialogue_tree = {
 	},
 	"game_over": {
 		"dahlia_says": "i think i need some space. for real this time. i’m signing off. bye.",
-		"is_game_end": true,
+		"is_end_of_day": true,
+		"next_day": 4,
+		"next_node": "credits",
 		"opt1": "...",
 		"opt2" : "...",
-		"quote": "Some things are meant to bloom for only a season."
+		"quote": "Some flowers are meant to bloom for only a season."
+	},
+	"credits": {
+		"dahlia_says": "Thank you for our time together.",
+		"is_game_end": true, 
+		"opt1": "Restart",
+		"opt2": "Exit"
 	}
 }

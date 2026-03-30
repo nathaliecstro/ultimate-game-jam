@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogue="*uid://if81a5qidtwm"
 SoundManager="*uid://bgweq63i2hel1"
+GlobalTime="*uid://b0q3avqqoeh2a"
 
 [display]
 

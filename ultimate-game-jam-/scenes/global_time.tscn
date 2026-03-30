@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bgaji30f53e1e"]
+
+[ext_resource type="Script" uid="uid://b0q3avqqoeh2a" path="res://scripts/global_time.gd" id="1_pyq5m"]
+
+[node name="GlobalTime" type="Node" unique_id=871827856]
+script = ExtResource("1_pyq5m")

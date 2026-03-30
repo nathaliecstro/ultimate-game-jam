@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6trbuh3qi4uq" path="res://scripts/aol_app.gd" id="1_75o27"]
 [ext_resource type="Texture2D" uid="uid://bgbhbmggvhhe7" path="res://assets/art/ultimate game jam art assets/Window.png" id="1_700a4"]
+[ext_resource type="PackedScene" uid="uid://b72euqywtjtti" path="res://scenes/windows_desktop.tscn" id="2_exrup"]
 [ext_resource type="Texture2D" uid="uid://mo2avid5g7kq" path="res://assets/art/ultimate game jam art assets/TextBoxRegular.png" id="2_m6txa"]
 [ext_resource type="FontFile" uid="uid://daa8yqxuaqcci" path="res://assets/fonts/Battlenet.ttf" id="3_m6txa"]
 [ext_resource type="Script" uid="uid://cpchcpny2yyop" path="res://scripts/option_1.gd" id="5_2g1y7"]
@@ -9,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://c674auc3iwd4v" path="res://assets/art/ultimate game jam art assets/CloseRegular.png" id="7_keeu2"]
 [ext_resource type="Texture2D" uid="uid://cr6c4wiwtdcr5" path="res://assets/logos/2 years of cgs promo.png" id="7_lduui"]
 [ext_resource type="Texture2D" uid="uid://bhd24wg0jolf5" path="res://assets/art/ultimate game jam art assets/ClosePressed.png" id="8_um3qw"]
+[ext_resource type="Texture2D" uid="uid://dystitbdqgbs2" path="res://assets/art/ultimate game jam art assets/PatchRegular.png" id="11_uxcp5"]
+[ext_resource type="Texture2D" uid="uid://dvquh10oe0hg4" path="res://assets/art/ultimate game jam art assets/PatchInverted.png" id="12_o0lkr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75o27"]
 texture = ExtResource("1_700a4")
@@ -66,6 +69,37 @@ texture = ExtResource("8_um3qw")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxcp5"]
 texture = ExtResource("8_um3qw")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o0lkr"]
+texture = ExtResource("11_uxcp5")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jn3ty"]
+texture = ExtResource("12_o0lkr")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ryudg"]
+texture = ExtResource("12_o0lkr")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2m2i"]
+texture = ExtResource("11_uxcp5")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exrup"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="AOL APP" type="Control" unique_id=1217261018]
 layout_mode = 3
 anchors_preset = 15
@@ -76,6 +110,9 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_75o27")
+
+[node name="WindowsDesktop" parent="." unique_id=220706393 instance=ExtResource("2_exrup")]
+layout_mode = 0
 
 [node name="aol window" type="Panel" parent="." unique_id=138333818]
 layout_mode = 1
@@ -263,6 +300,8 @@ offset_left = 396.0
 offset_top = 5.0
 offset_right = -6.0
 offset_bottom = -313.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_hprae")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_exrup")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uxcp5")
@@ -272,8 +311,52 @@ position = Vector2(328, 70.000015)
 scale = Vector2(0.051562496, 0.050555553)
 texture = ExtResource("7_lduui")
 
+[node name="cutiedahliachat" type="Button" parent="." unique_id=108024759]
+visible = false
+layout_mode = 0
+offset_left = 104.0
+offset_top = 445.0
+offset_right = 210.0
+offset_bottom = 475.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_m6txa")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_o0lkr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jn3ty")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryudg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_d2m2i")
+text = "cutiedahlia78 chat"
+
+[node name="Black_Screen" type="CanvasLayer" parent="." unique_id=1771910058]
+visible = false
+
+[node name="Panel" type="Panel" parent="Black_Screen" unique_id=1082909820]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_exrup")
+
+[node name="Label" type="Label" parent="Black_Screen" unique_id=1892090947]
+offset_left = 2.0
+offset_top = 156.0
+offset_right = 644.0
+offset_bottom = 330.0
+theme_override_fonts/font = ExtResource("3_m6txa")
+theme_override_font_sizes/font_size = 28
+text = "\"Sometimes flowers are meant to bloom for only a season.\""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GardenContainer" type="Control" parent="." unique_id=455905244]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option1" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option1" to="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option1" method="_on_pressed"]
 [connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option2" to="." method="_on_option_2_pressed"]
 [connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option2" to="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option2" method="_on_pressed"]
 [connection signal="pressed" from="aol window/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="cutiedahliachat" to="." method="_on_cutiedahliachat_pressed"]

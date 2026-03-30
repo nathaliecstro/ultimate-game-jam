@@ -1,15 +1,18 @@
 [gd_scene format=3 uid="uid://b72euqywtjtti"]
 
 [ext_resource type="FontFile" uid="uid://daa8yqxuaqcci" path="res://assets/fonts/Battlenet.ttf" id="1_nukex"]
+[ext_resource type="Script" uid="uid://ctxpewfneir4o" path="res://scripts/windows_desktop.gd" id="1_v2c85"]
 [ext_resource type="Texture2D" uid="uid://bxowj4lsd0pev" path="res://assets/art/ultimate game jam art assets/Flag.png" id="2_dx8os"]
 [ext_resource type="Texture2D" uid="uid://dystitbdqgbs2" path="res://assets/art/ultimate game jam art assets/PatchRegular.png" id="3_npvqa"]
 [ext_resource type="Texture2D" uid="uid://dvquh10oe0hg4" path="res://assets/art/ultimate game jam art assets/PatchInverted.png" id="4_mp5gx"]
 [ext_resource type="Shader" uid="uid://cib7ex6rpqgei" path="res://scripts/windows_desktop.gdshader" id="5_dx8os"]
 [ext_resource type="Texture2D" uid="uid://cgyqjcjchisxv" path="res://assets/logos/W95 Icons/my_computer_ICON.png" id="6_npvqa"]
 [ext_resource type="Texture2D" uid="uid://c4c4pfumtvojm" path="res://assets/logos/W95 Icons/network_neighbor_ICON.png" id="7_7b1ng"]
+[ext_resource type="Script" uid="uid://b0uq6ncgcxc0n" path="res://scripts/time.gd" id="7_qi5rq"]
 [ext_resource type="Texture2D" uid="uid://b6hper4hgui02" path="res://assets/logos/W95 Icons/paint_ICON.png" id="8_gd3bo"]
 [ext_resource type="Texture2D" uid="uid://d3fbe4lstr0mb" path="res://assets/logos/W95 Icons/recycling_bin_ICON.png" id="9_v2c85"]
 [ext_resource type="Texture2D" uid="uid://bcncp5ou0o2sa" path="res://assets/logos/aol-international-logo-png-transparent.png" id="10_qi5rq"]
+[ext_resource type="Texture2D" uid="uid://du1d34wabk4bm" path="res://assets/logos/my_desktop_garden_icon.png" id="11_gd3bo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_npvqa"]
 shader = ExtResource("5_dx8os")
@@ -66,11 +69,15 @@ texture = ExtResource("9_v2c85")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5asht"]
 texture = ExtResource("10_qi5rq")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v2c85"]
+texture = ExtResource("11_gd3bo")
+
 [node name="WindowsDesktop" type="Control" unique_id=220706393]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_v2c85")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=494402679]
 layout_mode = 1
@@ -92,7 +99,7 @@ anchor_bottom = 11.975
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="." unique_id=887865102]
+[node name="taskbar" type="Panel" parent="." unique_id=887865102]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -105,7 +112,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8lnpd")
 
-[node name="Button" type="Button" parent="Panel" unique_id=1867753576]
+[node name="Button" type="Button" parent="taskbar" unique_id=1867753576]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 8.0
@@ -120,7 +127,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_7b1ng")
 theme_override_styles/hover = SubResource("StyleBoxTexture_gd3bo")
 text = "Start"
 
-[node name="Panel" type="Panel" parent="Panel" unique_id=853714455]
+[node name="Panel" type="Panel" parent="taskbar" unique_id=853714455]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -131,7 +138,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nukex")
 
-[node name="timePanel" type="Panel" parent="Panel" unique_id=225029313]
+[node name="timePanel" type="Panel" parent="taskbar" unique_id=225029313]
 layout_mode = 0
 offset_left = 550.0
 offset_top = 8.0
@@ -139,7 +146,7 @@ offset_right = 634.0
 offset_bottom = 39.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_nukex")
 
-[node name="Label" type="Label" parent="Panel/timePanel" unique_id=1311651873]
+[node name="time" type="Label" parent="taskbar/timePanel" unique_id=1311651873]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -152,6 +159,7 @@ theme_override_font_sizes/font_size = 25
 text = "12:30 PM"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("7_qi5rq")
 
 [node name="Icons" type="Control" parent="." unique_id=1995445761]
 layout_mode = 1
@@ -250,3 +258,21 @@ offset_bottom = 57.0
 theme_override_fonts/font = ExtResource("1_nukex")
 theme_override_font_sizes/font_size = 12
 text = "AOL"
+
+[node name="mydesktopgarden" type="Panel" parent="Icons" unique_id=22272782]
+layout_mode = 0
+offset_left = 552.0
+offset_top = -22.0
+offset_right = 635.0
+offset_bottom = 63.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_v2c85")
+
+[node name="Label" type="Label" parent="Icons/mydesktopgarden" unique_id=1284913594]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 82.0
+offset_right = 81.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("1_nukex")
+theme_override_font_sizes/font_size = 12
+text = "My Desktop Garden"
