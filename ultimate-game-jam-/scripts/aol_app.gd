@@ -88,6 +88,6 @@ func _handle_day_transition():
 	
 	SoundManager.buddyout_play()
 	print("AOL Hidden. This is where you will instantiate your mini-game.")
-	
-	
-	
+
+func _on_exit_pressed():
+	$"aol window".visible = false

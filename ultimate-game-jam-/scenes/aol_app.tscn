@@ -6,7 +6,9 @@
 [ext_resource type="FontFile" uid="uid://daa8yqxuaqcci" path="res://assets/fonts/Battlenet.ttf" id="3_m6txa"]
 [ext_resource type="Script" uid="uid://cpchcpny2yyop" path="res://scripts/option_1.gd" id="5_2g1y7"]
 [ext_resource type="Script" uid="uid://cgxtjpbyjxi7b" path="res://scripts/option_2.gd" id="6_r7183"]
+[ext_resource type="Texture2D" uid="uid://c674auc3iwd4v" path="res://assets/art/ultimate game jam art assets/CloseRegular.png" id="7_keeu2"]
 [ext_resource type="Texture2D" uid="uid://cr6c4wiwtdcr5" path="res://assets/logos/2 years of cgs promo.png" id="7_lduui"]
+[ext_resource type="Texture2D" uid="uid://bhd24wg0jolf5" path="res://assets/art/ultimate game jam art assets/ClosePressed.png" id="8_um3qw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75o27"]
 texture = ExtResource("1_700a4")
@@ -54,6 +56,15 @@ texture_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqb3p"]
 bg_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hprae"]
+texture = ExtResource("7_keeu2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exrup"]
+texture = ExtResource("8_um3qw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxcp5"]
+texture = ExtResource("8_um3qw")
 
 [node name="AOL APP" type="Control" unique_id=1217261018]
 layout_mode = 3
@@ -243,12 +254,26 @@ theme_override_fonts/font = ExtResource("3_m6txa")
 theme_override_font_sizes/font_size = 15
 text = "cutiedahlia78 - Instant Message"
 
-[node name="cgs_promo" type="Sprite2D" parent="." unique_id=515782353]
-position = Vector2(436, 132)
-scale = Vector2(0.054375, 0.050555553)
+[node name="exit" type="Button" parent="aol window" unique_id=364009312]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 396.0
+offset_top = 5.0
+offset_right = -6.0
+offset_bottom = -313.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_hprae")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_exrup")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uxcp5")
+
+[node name="cgs_promo" type="Sprite2D" parent="aol window" unique_id=515782353]
+position = Vector2(328, 70.000015)
+scale = Vector2(0.051562496, 0.050555553)
 texture = ExtResource("7_lduui")
 
 [connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option1" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option1" to="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option1" method="_on_pressed"]
 [connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option2" to="." method="_on_option_2_pressed"]
 [connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option2" to="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option2" method="_on_pressed"]
+[connection signal="pressed" from="aol window/exit" to="." method="_on_exit_pressed"]
