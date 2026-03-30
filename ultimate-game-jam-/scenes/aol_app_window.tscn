@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://pkueqdbj4ms0"]
+
+[ext_resource type="Texture2D" uid="uid://bgbhbmggvhhe7" path="res://assets/art/ultimate game jam art assets/Window.png" id="1_hx3ht"]
+[ext_resource type="Texture2D" uid="uid://mo2avid5g7kq" path="res://assets/art/ultimate game jam art assets/TextBoxRegular.png" id="2_w0b0v"]
+[ext_resource type="FontFile" uid="uid://daa8yqxuaqcci" path="res://assets/fonts/Battlenet.ttf" id="3_k7vot"]
+[ext_resource type="Texture2D" uid="uid://ctevx21n3j3y" path="res://assets/art/ultimate game jam art assets/AOLButtonRegular.png" id="4_ym3lk"]
+[ext_resource type="Texture2D" uid="uid://dh3d2axxrjfbq" path="res://assets/art/ultimate game jam art assets/AOLButtonInverted.png" id="5_i2d84"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kuxxo"]
+texture = ExtResource("1_hx3ht")
+texture_margin_left = 4.0
+texture_margin_top = 23.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ffg2"]
+texture = ExtResource("2_w0b0v")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_23ehv"]
+texture = ExtResource("4_ym3lk")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7bhp6"]
+texture = ExtResource("5_i2d84")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxtcx"]
+texture = ExtResource("5_i2d84")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[node name="AOL App Window" type="Control" unique_id=1836196593]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=305282519]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.5
+offset_top = -136.5
+offset_right = 185.5
+offset_bottom = 136.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_kuxxo")
+
+[node name="ChatContainer" type="MarginContainer" parent="Panel" unique_id=1179538056]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 23.5
+offset_right = -129.5
+offset_bottom = -54.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ChatBox" type="Panel" parent="Panel/ChatContainer" unique_id=1766322484]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0ffg2")
+
+[node name="BuddyList" type="Panel" parent="Panel" unique_id=395974821]
+layout_mode = 0
+offset_left = 238.5
+offset_top = 32.5
+offset_right = 359.5
+offset_bottom = 251.5
+theme_override_styles/panel = SubResource("StyleBoxTexture_0ffg2")
+
+[node name="InputContainer" type="MarginContainer" parent="Panel" unique_id=1384423028]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.5
+offset_top = 204.5
+offset_right = -130.25
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="UserInput" type="Panel" parent="Panel/InputContainer" unique_id=225936299]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0ffg2")
+
+[node name="Send" type="Button" parent="Panel/InputContainer/UserInput" unique_id=1575859877]
+layout_mode = 0
+offset_top = 22.0
+offset_right = 220.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k7vot")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_23ehv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7bhp6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uxtcx")
+text = "Send
+
+"

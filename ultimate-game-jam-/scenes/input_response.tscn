@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://jfjkb2nnqe66"]
+
+[ext_resource type="FontFile" uid="uid://daa8yqxuaqcci" path="res://assets/fonts/Battlenet.ttf" id="1_5fbpa"]
+[ext_resource type="Script" uid="uid://c2qxkrj3hto8t" path="res://scripts/input_response.gd" id="1_brd57"]
+
+[node name="InputResponse" type="VBoxContainer" unique_id=499048991]
+theme_override_constants/separation = 1
+script = ExtResource("1_brd57")
+
+[node name="InputHistory" type="RichTextLabel" parent="." unique_id=1889095205]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_5fbpa")
+bbcode_enabled = true
+text = "This is what the user typed."
+fit_content = true
+scroll_active = false
+
+[node name="Response" type="RichTextLabel" parent="." unique_id=1994429483]
+custom_minimum_size = Vector2(210, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_5fbpa")
+bbcode_enabled = true
+text = "cutiedahlia78: omg that's so cool !"
+scroll_active = false
+
+[node name="Delay_Timer" type="Timer" parent="." unique_id=1112332925]

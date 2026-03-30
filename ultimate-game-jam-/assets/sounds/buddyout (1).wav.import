@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c8nsyq6sqy4ux"
+path="res://.godot/imported/buddyout (1).wav-579826dbd3569bed7b6145d69c4117ab.sample"
+
+[deps]
+
+source_file="res://assets/sounds/buddyout (1).wav"
+dest_files=["res://.godot/imported/buddyout (1).wav-579826dbd3569bed7b6145d69c4117ab.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

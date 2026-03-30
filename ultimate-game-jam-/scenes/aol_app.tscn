@@ -1,0 +1,254 @@
+[gd_scene format=3 uid="uid://be7gxv8sb8dcl"]
+
+[ext_resource type="Script" uid="uid://6trbuh3qi4uq" path="res://scripts/aol_app.gd" id="1_75o27"]
+[ext_resource type="Texture2D" uid="uid://bgbhbmggvhhe7" path="res://assets/art/ultimate game jam art assets/Window.png" id="1_700a4"]
+[ext_resource type="Texture2D" uid="uid://mo2avid5g7kq" path="res://assets/art/ultimate game jam art assets/TextBoxRegular.png" id="2_m6txa"]
+[ext_resource type="FontFile" uid="uid://daa8yqxuaqcci" path="res://assets/fonts/Battlenet.ttf" id="3_m6txa"]
+[ext_resource type="Script" uid="uid://cpchcpny2yyop" path="res://scripts/option_1.gd" id="5_2g1y7"]
+[ext_resource type="Script" uid="uid://cgxtjpbyjxi7b" path="res://scripts/option_2.gd" id="6_r7183"]
+[ext_resource type="Texture2D" uid="uid://cr6c4wiwtdcr5" path="res://assets/logos/2 years of cgs promo.png" id="7_lduui"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75o27"]
+texture = ExtResource("1_700a4")
+texture_margin_left = 4.0
+texture_margin_top = 23.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2g1y7"]
+texture = ExtResource("2_m6txa")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7183"]
+texture = ExtResource("2_m6txa")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_75o27"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75o27"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6txa"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2g1y7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g1y7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7183"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lduui"]
+texture = ExtResource("2_m6txa")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqb3p"]
+bg_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[node name="AOL APP" type="Control" unique_id=1217261018]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_75o27")
+
+[node name="aol window" type="Panel" parent="." unique_id=138333818]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 109.0
+offset_top = 62.0
+offset_right = -114.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_75o27")
+
+[node name="MarginContainer" type="MarginContainer" parent="aol window" unique_id=1934490309]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 45.0
+offset_right = 239.0
+offset_bottom = 237.0
+
+[node name="Rows" type="VBoxContainer" parent="aol window/MarginContainer" unique_id=1853262146]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="chatBox" type="PanelContainer" parent="aol window/MarginContainer/Rows" unique_id=82816344]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_2g1y7")
+
+[node name="Scroll" type="ScrollContainer" parent="aol window/MarginContainer/Rows/chatBox" unique_id=920240832]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="HistoryRows" type="VBoxContainer" parent="aol window/MarginContainer/Rows/chatBox/Scroll" unique_id=681294881]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="InputArea" type="PanelContainer" parent="aol window/MarginContainer/Rows" unique_id=1708970136]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_r7183")
+
+[node name="MarginContainer" type="MarginContainer" parent="aol window/MarginContainer/Rows/InputArea" unique_id=320362800]
+layout_mode = 2
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="aol window/MarginContainer/Rows/InputArea/MarginContainer" unique_id=1777368159]
+layout_mode = 2
+theme_override_constants/separation = 37
+alignment = 1
+
+[node name="Option1" type="Button" parent="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer" unique_id=425325094]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.99607843, 1)
+theme_override_fonts/font = ExtResource("3_m6txa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_75o27")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_75o27")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m6txa")
+autowrap_mode = 1
+script = ExtResource("5_2g1y7")
+
+[node name="Option2" type="Button" parent="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer" unique_id=1167982067]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.99215686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_m6txa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2g1y7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2g1y7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r7183")
+autowrap_mode = 1
+script = ExtResource("6_r7183")
+
+[node name="RefreshTimer" type="Timer" parent="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer" unique_id=16053602]
+one_shot = true
+
+[node name="BuddyList" type="PanelContainer" parent="aol window" unique_id=23359842]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 102.0
+offset_right = 400.0
+offset_bottom = 292.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_lduui")
+
+[node name="buddies" type="RichTextLabel" parent="aol window/BuddyList" unique_id=1420542354]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_m6txa")
+theme_override_fonts/bold_font = ExtResource("3_m6txa")
+theme_override_font_sizes/normal_font_size = 14
+text = "▾Buddies (2/4)
+		cutiedahlia78 (3%)
+		djnatz3000
+▾Family (0/0)
+▾Co-Workers (0/0)
+		"
+
+[node name="file" type="Label" parent="aol window" unique_id=1800642442]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 23.0
+offset_right = 27.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.00011382803, 0.00011382803, 0.00011382803, 1)
+theme_override_fonts/font = ExtResource("3_m6txa")
+theme_override_font_sizes/font_size = 13
+text = "File"
+
+[node name="edit" type="Label" parent="aol window" unique_id=25604453]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 23.0
+offset_right = 51.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.00011382803, 0.00011382803, 0.00011382803, 1)
+theme_override_fonts/font = ExtResource("3_m6txa")
+theme_override_font_sizes/font_size = 13
+text = "Edit"
+
+[node name="view" type="Label" parent="aol window" unique_id=1216629198]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 23.0
+offset_right = 75.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.00011382803, 0.00011382803, 0.00011382803, 1)
+theme_override_fonts/font = ExtResource("3_m6txa")
+theme_override_font_sizes/font_size = 13
+text = "View"
+
+[node name="people" type="Label" parent="aol window" unique_id=536058319]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 23.0
+offset_right = 114.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.00011382803, 0.00011382803, 0.00011382803, 1)
+theme_override_fonts/font = ExtResource("3_m6txa")
+theme_override_font_sizes/font_size = 13
+text = "People"
+
+[node name="people2" type="Label" parent="aol window" unique_id=606343841]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 23.0
+offset_right = 413.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.00011382803, 0.00011382803, 0.00011382803, 1)
+theme_override_fonts/font = ExtResource("3_m6txa")
+theme_override_font_sizes/font_size = 13
+text = "cutiedahlia78's Warning Level: 3%"
+
+[node name="Panel" type="Panel" parent="aol window" unique_id=2146142107]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 37.0
+offset_right = 414.0
+offset_bottom = 38.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dqb3p")
+
+[node name="Panel2" type="Panel" parent="aol window" unique_id=517521946]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 315.0
+offset_right = 414.0
+offset_bottom = 316.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dqb3p")
+
+[node name="Label" type="Label" parent="aol window" unique_id=1255618779]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 175.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("3_m6txa")
+theme_override_font_sizes/font_size = 15
+text = "cutiedahlia78 - Instant Message"
+
+[node name="cgs_promo" type="Sprite2D" parent="." unique_id=515782353]
+position = Vector2(436, 132)
+scale = Vector2(0.054375, 0.050555553)
+texture = ExtResource("7_lduui")
+
+[connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option1" to="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option1" method="_on_pressed"]
+[connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option2" to="aol window/MarginContainer/Rows/InputArea/MarginContainer/ChoiceContainer/Option2" method="_on_pressed"]
